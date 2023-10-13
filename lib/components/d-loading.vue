@@ -16,7 +16,7 @@
             <!-- 缓冲中 -->
             <span v-show="loadType == 'waiting'">
                 <i class="rotating iconfont icon-loading f50"></i>
-                <p>正在缓冲...</p>
+                <!-- <p>正在缓冲...</p> -->
             </span>
             <!-- 播放结束 -->
             <span v-show="loadType == 'ended'">
@@ -27,7 +27,7 @@
             <!-- 播放错误 -->
             <span v-show="loadType == 'error' || loadType == 'stalled'">
                 <p @click="replayHandle" class="d-flex-x d-pointer">
-                    <i class="iconfont icon-replay f24 mr5"></i>请求错误
+                    <i class="iconfont icon-replay f24 mr5"></i>
                 </p>
             </span>
         </div>
@@ -38,7 +38,8 @@
 import { getCurrentInstance, reactive, computed, } from 'vue'
 import DIcon from './d-icon.vue'
 const { proxy } = getCurrentInstance()
-const LOAD_TYPE = ['loadstart', 'waiting', 'ended', 'error', 'stalled']
+// stalled ,error
+const LOAD_TYPE = ['loadstart', 'waiting', 'ended']
 const props = defineProps({
     loadType: String,
     text: {

@@ -36,7 +36,7 @@ const options = reactive({
   control: true, //是否显示控制器
   title: "", //视频名称
   type: "m3u8",
-  src: "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8", //视频源
+  src: "https://static.umate.me/media/20231013/7294/hls/7e32f0bb-3f08-4493-8211-a75d6b3f8881.m3u8?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9zdGF0aWMudW1hdGUubWUvbWVkaWEvMjAyMzEwMTMvNzI5NC9obHMvN2UzMmYwYmItM2YwOC00NDkzLTgyMTEtYTc1ZDZiM2Y4ODgxKiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY5NzYzNTk0MH19fV19&Signature=oT08MseRUc1Y9z46l2lJGRFtc9uTVhIkaePG2fpU9UXldFPLVN4bmZRQC7jKtwMGg5Bs6PBG3VN-lAWUbNNLGJMX~akS8tZK8n8szKFWk30~f5TDv3s1gLXsan3s6AUU1fOc6FQSTSRj38IGtcTtTggu0UrFxrZdf500k83~LnY0HiWE2Wr0wqnWqvP0fh8Nsr9hgOasQQI1qao79UCT7mvBocZ2ducec9pCsU~O8hIzV4HeiSIVNkQVeZLGW70RM3vK8vFxJgCJWzds~qOCY03EIORk1qV3qdnVI~hm0oOdHwHTwPoercxBAYdUn0VwtdQ1fsgkHvRaB5GQcEqBRA__&Key-Pair-Id=KHR0EACU7S0G5", //视频源
   // src: "https://cdn.jsdelivr.net/gh/xdlumia/files/video-play/IronMan.mp4", //视频源
   // src: "https://logos-channel.scaleengine.net/logos-channel/live/biblescreen-ad-free/playlist.m3u8", //视频源
   poster: "https://cdn.jsdelivr.net/gh/xdlumia/files/video-play/ironMan.jpg", //封面

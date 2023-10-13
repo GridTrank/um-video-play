@@ -309,6 +309,8 @@ const videoEvents = videoEmits.reduce((events, emit) => {
 
   return events;
 }, {});
+
+const Hls = new Hls2({ fragLoadingTimeOut: 20000 });
 // 可以播放
 videoEvents["onCanplay"] = compose(videoEvents["onCanplay"], () => {
   if (state.playBtnState != "play") {
@@ -435,8 +437,9 @@ const playHandle = () => {
   state.loadStateType = "play";
   state.dVideo.play().catch(() => {
     setTimeout(() => {
-      state.playBtnState = "replay";
-      state.loadStateType = "error";
+      // state.playBtnState = "replay";
+      // state.loadStateType = "error";
+      emits('error')
     }, 500);
   });
   state.playBtnState = "pause";
@@ -536,14 +539,14 @@ const init = (): void => {
   }
   // // 使用hls解码
   else if (Hls2.isSupported()) {
-    const Hls = new Hls2({ fragLoadingTimeOut: 2000 });
+    
     Hls.detachMedia(); //解除绑定
     Hls.attachMedia(state.dVideo);
     Hls.on(Hls2.Events.MEDIA_ATTACHED, () => {
       Hls.loadSource(props.src);
       // 加载可用质量级别
       Hls.on('hlsManifestParsed', (ev, data) => {
-        console.log(data)
+        console.log(131321,data)
         state.currentLevel = data.level
         state.qualityLevels = data.levels || []
         // state.dVideo.load();

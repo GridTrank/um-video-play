@@ -1,10 +1,4 @@
-<!--
- * @Author: web.王晓冬
- * @Date: 2021-08-19 18:56:59
- * @LastEditors: web.王晓冬
- * @LastEditTime: 2021-10-10 22:32:48
- * @Description: file content
--->
+
 
 [![Version](https://img.shields.io/npm/dt/vue3-video-play.svg?style=flat-square)](https://www.npmjs.com/package/vue3-video-play)
 [![Downloads](https://img.shields.io/npm/v/vue3-video-play.svg?style=flat-square)](https://www.npmjs.com/package/vue3-video-play)
