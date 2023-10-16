@@ -266,6 +266,8 @@ const emits = defineEmits([
   "mirrorChange",
   "loopChange",
   "lightOffChange",
+  "getQualityLevels",
+  "setQualityLevels"
 ]); //emits
 
 const refPlayerWrap: Ref<HTMLElement> = ref(null); //wrap
@@ -502,6 +504,7 @@ const mouseMovewWarp = (ev) => {
 const qualityLevelsHandle = (row, index) => {
   Hls.currentLevel = index
   state.currentLevel = index
+  emits('setQualityLevels',row,index)
 };
 // 播放速度
 const playbackRate = (row) => {
@@ -550,6 +553,7 @@ const init = (): void => {
         state.currentLevel = data.level
         state.qualityLevels = data.levels || []
         // state.dVideo.load();
+        emits('getQualityLevels',data.levels)
       });
     })
 

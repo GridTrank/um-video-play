@@ -13,7 +13,7 @@
     <button
       @click="options.src = 'https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8'"
     >{{ options.src }}</button>
-    <videoPlay ref="video" style="display: inline-block; width: 100%" v-bind="options" />
+    <videoPlay ref="video" style="display: inline-block; width: 100%" v-bind="options" @getQualityLevels="getQualityLevels" @setQualityLevels="setQualityLevels" />
   </div>
 </template>
 
@@ -56,7 +56,17 @@ const video = ref(null);
 nextTick(() => {
   console.log(video.value);
 });
+function getQualityLevels(data:any){
+  console.log('getQualityLevels',data)
+}
+function setQualityLevels(data:any){
+  console.log('setQualityLevels',data)
+}
+
 </script>
 
-<style scoped>
+<style scoped >
+:deep(.d-player-video-main){
+  object-fit: cover;
+}
 </style>
