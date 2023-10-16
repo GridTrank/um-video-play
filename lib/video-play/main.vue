@@ -549,7 +549,6 @@ const init = (): void => {
       Hls.loadSource(props.src);
       // 加载可用质量级别
       Hls.on('hlsManifestParsed', (ev, data) => {
-        console.log(131321,data)
         state.currentLevel = data.level
         state.qualityLevels = data.levels || []
         // state.dVideo.load();
